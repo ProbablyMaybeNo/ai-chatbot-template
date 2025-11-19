@@ -1,0 +1,88 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Demo Content Styling (Remove for client projects) */
+.demo-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: white;
+}
+
+.demo-content header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.demo-content header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.demo-content header p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.demo-content section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.demo-content section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.demo-content section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.demo-content section li {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.demo-content section code {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.demo-content footer {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0.8;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .demo-content {
+    padding: 40px 16px;
+  }
+
+  .demo-content header h1 {
+    font-size: 32px;
+  }
+
+  .demo-content header p {
+    font-size: 16px;
+  }
+
+  .demo-content section {
+    padding: 24px;
+  }
+
+  .demo-content section h2 {
+    font-size: 22px;
+  }
+}
