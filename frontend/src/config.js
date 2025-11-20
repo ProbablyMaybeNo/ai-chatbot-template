@@ -53,7 +53,7 @@ export const config = {
   ],
 
   // API Configuration
-  apiEndpoint: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  apiEndpoint: process.env.REACT_APP_API_URL || "https://ai-chatbot-template-production.up.railway.app/api",
 
   // Features
   enableTypingIndicator: true,
