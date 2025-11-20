@@ -14,18 +14,18 @@ const emailService = require('./services/emailService');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware - CORS Configuration
-// Simple and permissive CORS for Vercel frontend
-const corsOptions = {
-  origin: '*', // Allow all origins temporarily to test
-  credentials: false,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-  optionsSuccessStatus: 200
-};
+// Middleware - Manual CORS headers (bypassing cors library)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
 
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+  // Handle preflight
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
