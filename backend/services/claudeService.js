@@ -11,7 +11,7 @@ class ClaudeService {
       apiKey: process.env.ANTHROPIC_API_KEY,
     });
 
-    this.model = process.env.CLAUDE_MODEL || 'claude-3-sonnet-20240229';
+    this.model = process.env.CLAUDE_MODEL || 'claude-3-haiku-20240307';
     this.maxTokens = parseInt(process.env.CLAUDE_MAX_TOKENS) || 1000;
     this.temperature = parseFloat(process.env.CLAUDE_TEMPERATURE) || 0.7;
   }
