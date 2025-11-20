@@ -204,12 +204,12 @@ app.use((error, req, res, next) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
+// Start server - Bind to 0.0.0.0 for Railway/Docker compatibility
+app.listen(PORT, '0.0.0.0', () => {
   console.log('\n' + '='.repeat(60));
   console.log('AI CHATBOT API SERVER');
   console.log('='.repeat(60));
-  console.log(`Server running on: http://localhost:${PORT}`);
+  console.log(`Server running on: http://0.0.0.0:${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/api/health`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Claude API: ${process.env.ANTHROPIC_API_KEY ? '✓ Configured' : '✗ Missing'}`);
