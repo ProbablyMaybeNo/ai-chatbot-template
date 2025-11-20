@@ -52,7 +52,7 @@ export const config = {
     { label: "Services", action: "What services do you offer?" }
   ],
 
-  // API Configuration - Backend verified working
+  // API Configuration - Using Render backend (environment variable removed)
   apiEndpoint: process.env.REACT_APP_API_URL || "https://ai-chatbot-template.onrender.com/api",
 
   // Features
